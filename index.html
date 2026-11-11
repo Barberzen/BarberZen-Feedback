@@ -2,8 +2,31 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback - BarberZen</title>
+    <title>Feedback - Salon</title>
+</head>
+<body>
+
+    <!-- Aici este conținutul paginii tale (formularul, stelele, etc.) -->
+    
+    <!-- Punem scriptul de protecție chiar aici, înainte de închiderea corpului paginii -->
+    <script>
+        // Oprește tasta F12, Ctrl+U (View Source) și scurtăturile de Inspect Element
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'C' || e.key === 'c')) ||
+                (e.ctrlKey && (e.key === 'U' || e.key === 'u'))) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Blochează meniul de click-dreapta (Context Menu)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font -->
